@@ -17,7 +17,6 @@ def motion_off():
 @app.route('/api/monitor/on')
 def monitor_on():
     os.system("vcgencmd display_power 1")
-    os.system("xscreensaver-command -deactivate")
     return jsonify(result='ok')
 
 @app.route('/api/monitor/off')
